@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- js swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #fff;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .phase1 {
+            height: 100vh;
+        }
+
+        /* navbar*/
+        .navbar {
+            margin: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #898989;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+        }
+
+        .left_nav {
+            padding: 10px;
+            background-color: #C9CACA;
+            width: 20%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin: 5px;
+
+        }
+
+        .nav_text {
+            color: black;
+        }
+
+        .nav_right {
+            background-color: #C9CACA;
+            margin: 0;
+            font-family: helvetica;
+            font-size: 14pt;
+            padding: 10px;
+
+        }
+
+        /* banner */
+        #banner {
+            background-color: rgb(161, 159, 159);
+            width: 100%;
+            height: 40vh;
+            line-height: 40vh;
+            font-size: 40pt;
+            font-family: helvetica, "微軟正黑體";
+            color: #fff;
+        }
+
+        /* about */
+        .avatar {
+            width: 200px;
+            height: 200px;
+            /* background-color: rgb(161, 159, 159); */
+            border-radius: 100px;
+            position: absolute;
+            top: -90px;
+            left: 200px;
+            background-image: url("/images/photo_avatar.jpg");
+            background-size: contain;
+        }
+
+        .content {
+            width: 100%;
+            height: 40vh;
+            background-color: #C9CACA;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .text {
+            background-color: rgba(201, 202, 202, 0.664);
+            width: 50%;
+            height: 20vh;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: absolute;
+            top: -90px;
+            left: 30%;
+            font-family: helvetica, "微軟正黑體";
+            font-weight: bold;
+            font-size: 16pt;
+            /* opacity: 0.8; */
+        }
+
+        .about_photo {
+            position: absolute;
+            bottom: 20px;
+            left: 571px;
+        }
+
+        .ap {
+            height: 250px;
+            width: 350px;
+            background-color: rgb(161, 159, 159);
+            display: inline-block;
+            overflow: hidden;
+            margin-right: 10px;
+
+        }
+
+        .ap img {
+            max-height: 450px;
+            max-width: 400px;
+        }
+
+        /* phase2 */
+        .phase2 {
+            height: 100vh;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .bg1 {
+            background-color: #C9CACA;
+            width: 200%;
+            height: 50vh;
+            transform: rotate(10deg);
+            position: absolute;
+            top: 300px;
+            left: -500px;
+
+        }
+
+        .photo_YT {
+            width: 80%;
+            /* background-color: #777; */
+            height: 50vh;
+            position: absolute;
+            top: 104px;
+            left: 300px;
+            display: flex;
+
+        }
+
+        .pic_b {
+            width: 50%;
+            height: 50vh;
+            background-color: #fff;
+            margin-right: 20px;
+            border: 1px black solid;
+            background-image: url("/images/youtube_photo01.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+
+        .pic_s {
+            width: 50%;
+            height: 50vh;
+            /* background-color: #777; */
+        }
+
+        .s {
+            width: 100%;
+            height: calc(25vh - 10px);
+
+            display: inline-block;
+        }
+
+        .s_top {
+            margin-bottom: 20px;
+        }
+
+        .pic_yt {
+            background-color: #fff;
+            width: calc(50% - 12px);
+            height: calc(25vh - 10px);
+            display: inline-block;
+            border: 1px black solid;
+        }
+
+        .pic_yt img {
+            max-height: 250px;
+            max-width: 200px;
+        }
+
+        .pic_YT2 {
+            margin-right: 20px;
+            background-image: url("/images/youtube_photo02.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+
+        .pic_YT3 {
+            background-image: url("/images/youtube_photo03.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+
+        .pic_YT4 {
+            margin-right: 20px;
+            background-image: url("/images/youtube_photo04.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+
+        .YT_icon {
+            position: absolute;
+            bottom: 80px;
+            left: 78px;
+        }
+
+        .more {
+            overflow: hidden;
+            text-align: center;
+            font-size: 50pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            line-height: 200px;
+            border: none;
+            background-color: rgba(201, 202, 202, 0);
+            color: rgb(246, 248, 248);
+
+        }
+
+        .yt_text {
+            font-size: 38pt;
+            font-family: Helvetica;
+            font-weight: bold;
+            position: absolute;
+            left: 95px;
+            bottom: 45px;
+        }
+
+        /* phase3 */
+        .phase3 {
+            height: 100%;
+            background-color: rgba(219, 217, 217, 0.356);
+            font-family: Helvetica;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .bg2_T {
+            background-color: #B5B5B6;
+            height: 55vh;
+            width: 200%;
+            position: absolute;
+            top: -455px;
+            left: -250px;
+            transform: rotate(-15deg);
+        }
+
+        .bg2_B {
+            background-color: #B5B5B6;
+            height: 55vh;
+            width: 200%;
+            position: absolute;
+            bottom: 0;
+            transform: rotate(-15deg);
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 50vh;
+            position: relative;
+            background-color: rgba(219, 217, 217, 0.356);
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+
+
+        }
+
+        .swiper-slide img {
+            max-width: 50%;
+            max-height: 45vh;
+            border: 1px lightgray solid;
+            filter: grayscale(80%);
+        }
+
+        .swiper-slide :hover {
+            filter: grayscale(40%);
+            max-height: 50vh;
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            left: 150px;
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            right: 250px;
+        }
+
+        .ph3_text a {
+            font-family: Helvetica;
+            font-weight: bold;
+            opacity: 0.8;
+            z-index: 99;
+
+        }
+
+        #P {
+            font-size: 200pt;
+            position: absolute;
+            top: 300px;
+            left: 800px;
+            user-select: none;
+        }
+
+        #s {
+            font-size: 90pt;
+            position: absolute;
+            top: 330px;
+            left: 1000px;
+            user-select: none;
+        }
+
+        #ixiv {
+            color: #00A0E9;
+            font-size: 50pt;
+            position: absolute;
+            top: 480px;
+            left: 990px;
+            user-select: none;
+        }
+
+        /* phase4 */
+        .phase4 {
+
+            background-color: #B5B5B6;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg_mf {
+            background-color: #606060;
+            width: 200%;
+            height: 50vh;
+            transform: rotate(20deg);
+            position: absolute;
+            top: 530px;
+            left: -500px;
+
+        }
+
+        .bike {
+            position: relative;
+        }
+
+        #sc2 {
+            height: 65vh;
+
+        }
+
+        #sc2 img {
+            max-height: 60vh;
+        }
+
+        #sc2 img:hover {
+            max-height: 65vh;
+        }
+
+        .ph4_text {
+            font-family: Helvetica;
+            z-index: 100;
+            font-weight: bold;
+        }
+
+        #ph4_textleft {
+            font-size: 300pt;
+            writing-mode: tb-rl;
+            position: absolute;
+            left: -150px;
+            color: #9FA0A0;
+        }
+
+        #ph4_textright {
+            font-size: 180pt;
+            writing-mode: tb-rl;
+            position: absolute;
+            right: -100px;
+            color: #EFEFEF;
+        }
+
+        .favorite {
+            height: 80vh;
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            /* position: relative; */
+        }
+
+        .box {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+        }
+
+        .card {
+            max-width: calc((100% / 4) - 15px);
+            height: 30vh;
+
+            z-index: 99;
+            position: relative;
+        }
+
+        .card a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40pt;
+            font-weight: bold;
+            color: rgba(164, 164, 167, 0.795);
+            text-shadow: 1px 1px white, -1px -1px #444;
+        }
+
+        .card img {
+            text-align: center;
+            max-width: 100%;
+            height: 30vh;
+            border: 1px rgb(230, 224, 224) solid;
+            opacity: 0.8;
+        }
+
+        #c1 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #c2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        #c3 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #c4 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .favorite {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #ph4_textT {
+            font-size: 150pt;
+            position: absolute;
+            top: -80px;
+            left: 600px;
+            color: #9FA0A0;
+        }
+
+        #ph4_textB {
+            font-size: 150pt;
+            position: absolute;
+            bottom: -80px;
+            left: 600px;
+            color: #EFEFEF;
+        }
+
+        /* footer */
+        .footer {
+            height: 50vh;
+            background-color: rgb(173, 173, 175);
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .link {
+            width: 200px;
+            height: 200px;
+            background-color: #EFEFEF;
+            display: inline-block;
+            margin: 20px;
+            border: 1px #acadac solid;
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .link img {
+            max-width: 100%;
+        }
+
+        #myBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 20px;
+            /* Place the button at the bottom of the page */
+            right: 30px;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: red;
+            /* Set a background color */
+            color: white;
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            border-radius: 10px;
+            /* Rounded corners */
+            font-size: 18px;
+            /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+            /* Add a dark-grey background on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="phase1">
+        <div class="navbar">
+            <div class="left_nav">
+                <div class="logo">
+                    <img src="/images/nav_logo.png" height="150px" width="118px " ;>
+                </div>
+            </div>
+            <ul class="nav_right">
+                <li><a href="#phase2" style="text-decoration: none;" class="nav_text">About me </a></li>
+                <li><a href="#phase3" style="text-decoration: none;" class="nav_text">Proflio </a></li>
+                <li><a href="#phase4" style="text-decoration: none;" class="nav_text">My Favorite </a></li>
+                <li><a href="#footer" style="text-decoration: none;" class="nav_text">Soial Media</a></li>
+            </ul>
+        </div>
+        <div id="banner" style="text-align:center;"><img src="" alt="">Banner未定</div>
+        <div class="about" id="#phase1">
+            <div class="content">
+                <div class="avatar"></div>
+                <div class="text" style="border: 1px black solid;">
+                    <p>嗨！我是素顏，本名是陳仕凱，目前是應屆畢業生，
+                        在即將畢業前為自己做個紀錄，紀錄這幾年來的作品與生活點滴，
+                        目前在學習概念美術、專案企劃、網站前端、影片剪輯，
+                        並有一個Youtube頻道在運作，
+                        這個頻道主要會放ACG介紹影片，
+                        內容大部分都會是我個人看完該作品之後
+                        所做出的見解跟介紹
+                        也會放一些twitch直播跟唱歌的影片
+                    </p>
+                </div>>
+                <div class="about_photo">
+                    <div class="ap"><img src="/images/photo_01.jpg"></div>
+                    <div class="ap"><img src="/images/photo_02.jpg"></div>
+                    <div class="ap"><img src="/images/photo_03.jpg" height="300px"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <section id="phase2" class="section2">
+            <div class="phase2">
+                <div class="bg1"></div>
+                <div class="photo_YT">
+                    <div class="pic_b"></div>
+                    <div class="pic_s">
+                        <div class="s s_top">
+                            <div class=" pic_yt pic_YT2"></div>
+                            <div class=" pic_yt pic_YT3"></div>
+                        </div>
+                        <div class="s s_bot">
+                            <div class=" pic_yt pic_YT4"></div>
+                            <div class=" pic_yt more">more...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="YT_icon"><img src="/images/icon_youtube.png" width="100px" height="100px">
+                </div>
+                <div class="yt_text">My Youtube Channel</div>
+            </div>
+        </section>
+        <section id="phase3" class="section3">
+            <div class="phase3">
+                <div class="swiper-container sc" id="test">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/proflio/2019-4-2-sideface_shadow.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/2018-11-01-markcup.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/2019-2-21-color grading.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/2019-2-21-isomatric.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/2019-4-3-BlackLin.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/2019-4-5-BlackIndian.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/MP01.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/MP02-2.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/MP02.jpg "></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
+                <div class="swiper-container" id="test1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/proflio/pixiv01.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/pixiv02.jpg "></div>
+                        <div class="swiper-slide"><img src="/proflio/pixiv03.jpg "></div>
+
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="bg2_T"></div>
+                <div class="bg2_B"></div>
+                <div class="ph3_text">
+                    <a id="P">P</a>
+                    <a id="s">S</a>
+                    <a id="ixiv">ixiv</a>
+                </div>
+            </div>
+        </section>
+        <section id="phase4" class="section4">
+            <div class="phase4">
+                <div class="bg_mf"></div>
+                <div class="bike">
+                    <div class="swiper-container" id="sc2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide "><img src="/images/photo_bike.jpg "></div>
+                            <div class="swiper-slide"><img src="/images/photo_bike2.jpg "></div>
+                            <div class="swiper-slide"><img src="/images/photo_bike3.jpg"></div>
+
+                        </div>
+                        <div class="swiper-pagination" id="sc_b"></div>
+                        <!-- Add Arrows -->
+
+                    </div>
+                    <div class="ph4_text">
+                        <a id="ph4_textleft">MY</a>
+                        <a id="ph4_textright">BIKE</a>
+                    </div>
+                </div>
+                <div class="favorite">
+
+                    <div class="box">
+                        <div class="card card1"><img src="/images/favorite_animate.jpg">
+                            <a id="c1">Animate</a></div>
+                        <div class="card card2"><img src="/images/favorite_game.jpg">
+                            <a id="c2">Game</a></div>
+                        <div class="card card3"><img src="/images/favorite_movie.jpg">
+                            <a id="c3">Movie</a></div>
+                        <div class="card card4"><img src="/images/favorite_streamer.gif">
+                            <a id="c4">Streamer</a></div>
+                    </div>
+                    <div class="ph4_text">
+                        <div id="ph4_textT"><a>Favorite</a></div>
+                        <div id="ph4_textB"><a>Favorite</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer" class="section5"></section>
+        <div class="footer">
+            <div class="soical">
+                <div class="link"><a href=""><img src="/images/icon_fb.png"></a></div>
+                <div class="link"><a href=""><img src="/images/icon_ig.png"></a></div>
+                <div class="link"><a href=""><img src="/images/icon_youtube.png"></a></div>
+                <div class="link"><a href=""><img src="/images/icon_pixiv.png"></a></div>
+                <div class="link"><a href=""><img src="/images/icon_twitch.png"></a></div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- js swiper -->
+    <script>
+        var swiper = new Swiper('#test', {
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        var swiper2 = new Swiper('#test1', {
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper1 = new Swiper('#sc2', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            loop: true,
+            pagination: {
+                el: '#sc_b',
+                dynamicBullets: true,
+            },
+
+        });
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+
+</html>
