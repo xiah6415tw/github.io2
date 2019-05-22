@@ -21,8 +21,8 @@
             box-sizing: border-box;
         }
 
-        .phase1 {
-            height: 100vh;
+        #phase1 {
+            height: 50vh;
         }
 
         /* navbar*/
@@ -506,6 +506,7 @@
             top: -80px;
             left: 600px;
             color: #9FA0A0;
+            user-select: none;
         }
 
         #ph4_textB {
@@ -514,6 +515,7 @@
             bottom: -80px;
             left: 600px;
             color: #EFEFEF;
+            user-select: none;
         }
 
         /* footer */
@@ -577,22 +579,22 @@
 </head>
 
 <body>
-    <section class="phase1">
-        <div class="navbar">
-            <div class="left_nav">
-                <div class="logo">
-                    <img src="/images/nav_logo.png" height="150px" width="118px " ;>
-                </div>
+    <div class="navbar">
+        <div class="left_nav">
+            <div class="logo">
+                <img src="/images/nav_logo.png" height="150px" width="118px " ;>
             </div>
-            <ul class="nav_right">
-                <li><a href="#phase2" style="text-decoration: none;" class="nav_text">About me </a></li>
-                <li><a href="#phase3" style="text-decoration: none;" class="nav_text">Proflio </a></li>
-                <li><a href="#phase4" style="text-decoration: none;" class="nav_text">My Favorite </a></li>
-                <li><a href="#footer" style="text-decoration: none;" class="nav_text">Soial Media</a></li>
-            </ul>
         </div>
-        <div id="banner" style="text-align:center;"><img src="" alt="">Banner未定</div>
-        <div class="about" id="#phase1">
+        <ul class="nav_right">
+            <li><a href="#phase1" style="text-decoration: none;" class="nav_text">About me </a></li>
+            <li><a href="#phase3" style="text-decoration: none;" class="nav_text">Proflio </a></li>
+            <li><a href="#phase4" style="text-decoration: none;" class="nav_text">My Favorite </a></li>
+            <li><a href="#footer" style="text-decoration: none;" class="nav_text">Soial Media</a></li>
+        </ul>
+    </div>
+    <div id="banner" style="text-align:center;"><img src="" alt="">Banner未定</div>
+    <section id="phase1" class="section1">
+        <div class="about">
             <div class="content">
                 <div class="avatar"></div>
                 <div class="text" style="border: 1px black solid;">
@@ -605,7 +607,7 @@
                         所做出的見解跟介紹
                         也會放一些twitch直播跟唱歌的影片
                     </p>
-                </div>>
+                </div>
                 <div class="about_photo">
                     <div class="ap"><img src="/images/photo_01.jpg"></div>
                     <div class="ap"><img src="/images/photo_02.jpg"></div>
@@ -614,115 +616,116 @@
             </div>
         </div>
         </div>
-        <section id="phase2" class="section2">
-            <div class="phase2">
-                <div class="bg1"></div>
-                <div class="photo_YT">
-                    <div class="pic_b"></div>
-                    <div class="pic_s">
-                        <div class="s s_top">
-                            <div class=" pic_yt pic_YT2"></div>
-                            <div class=" pic_yt pic_YT3"></div>
-                        </div>
-                        <div class="s s_bot">
-                            <div class=" pic_yt pic_YT4"></div>
-                            <div class=" pic_yt more">more...</div>
-                        </div>
+    </section>
+    <section id="phase2" class="section2">
+        <div class="phase2">
+            <div class="bg1"></div>
+            <div class="photo_YT">
+                <div class="pic_b"></div>
+                <div class="pic_s">
+                    <div class="s s_top">
+                        <div class=" pic_yt pic_YT2"></div>
+                        <div class=" pic_yt pic_YT3"></div>
                     </div>
-                </div>
-                <div class="YT_icon"><img src="/images/icon_youtube.png" width="100px" height="100px">
-                </div>
-                <div class="yt_text">My Youtube Channel</div>
-            </div>
-        </section>
-        <section id="phase3" class="section3">
-            <div class="phase3">
-                <div class="swiper-container sc" id="test">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/proflio/2019-4-2-sideface_shadow.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/2018-11-01-markcup.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/2019-2-21-color grading.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/2019-2-21-isomatric.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/2019-4-3-BlackLin.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/2019-4-5-BlackIndian.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/MP01.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/MP02-2.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/MP02.jpg "></div>
-                    </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-
-                </div>
-                <div class="swiper-container" id="test1">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/proflio/pixiv01.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/pixiv02.jpg "></div>
-                        <div class="swiper-slide"><img src="/proflio/pixiv03.jpg "></div>
-
-                    </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <div class="bg2_T"></div>
-                <div class="bg2_B"></div>
-                <div class="ph3_text">
-                    <a id="P">P</a>
-                    <a id="s">S</a>
-                    <a id="ixiv">ixiv</a>
-                </div>
-            </div>
-        </section>
-        <section id="phase4" class="section4">
-            <div class="phase4">
-                <div class="bg_mf"></div>
-                <div class="bike">
-                    <div class="swiper-container" id="sc2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide "><img src="/images/photo_bike.jpg "></div>
-                            <div class="swiper-slide"><img src="/images/photo_bike2.jpg "></div>
-                            <div class="swiper-slide"><img src="/images/photo_bike3.jpg"></div>
-
-                        </div>
-                        <div class="swiper-pagination" id="sc_b"></div>
-                        <!-- Add Arrows -->
-
-                    </div>
-                    <div class="ph4_text">
-                        <a id="ph4_textleft">MY</a>
-                        <a id="ph4_textright">BIKE</a>
-                    </div>
-                </div>
-                <div class="favorite">
-
-                    <div class="box">
-                        <div class="card card1"><img src="/images/favorite_animate.jpg">
-                            <a id="c1">Animate</a></div>
-                        <div class="card card2"><img src="/images/favorite_game.jpg">
-                            <a id="c2">Game</a></div>
-                        <div class="card card3"><img src="/images/favorite_movie.jpg">
-                            <a id="c3">Movie</a></div>
-                        <div class="card card4"><img src="/images/favorite_streamer.gif">
-                            <a id="c4">Streamer</a></div>
-                    </div>
-                    <div class="ph4_text">
-                        <div id="ph4_textT"><a>Favorite</a></div>
-                        <div id="ph4_textB"><a>Favorite</a></div>
+                    <div class="s s_bot">
+                        <div class=" pic_yt pic_YT4"></div>
+                        <div class=" pic_yt more">more...</div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="footer" class="section5"></section>
-        <div class="footer">
-            <div class="soical">
-                <div class="link"><a href=""><img src="/images/icon_fb.png"></a></div>
-                <div class="link"><a href=""><img src="/images/icon_ig.png"></a></div>
-                <div class="link"><a href=""><img src="/images/icon_youtube.png"></a></div>
-                <div class="link"><a href=""><img src="/images/icon_pixiv.png"></a></div>
-                <div class="link"><a href=""><img src="/images/icon_twitch.png"></a></div>
+            <div class="YT_icon"><img src="/images/icon_youtube.png" width="100px" height="100px">
+            </div>
+            <div class="yt_text">My Youtube Channel</div>
+        </div>
+    </section>
+    <section id="phase3" class="section3">
+        <div class="phase3">
+            <div class="swiper-container sc" id="test">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/proflio/2019-4-2-sideface_shadow.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/2018-11-01-markcup.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/2019-2-21-color grading.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/2019-2-21-isomatric.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/2019-4-3-BlackLin.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/2019-4-5-BlackIndian.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/MP01.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/MP02-2.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/MP02.jpg "></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+            <div class="swiper-container" id="test1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/proflio/pixiv01.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/pixiv02.jpg "></div>
+                    <div class="swiper-slide"><img src="/proflio/pixiv03.jpg "></div>
+
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="bg2_T"></div>
+            <div class="bg2_B"></div>
+            <div class="ph3_text">
+                <a id="P">P</a>
+                <a id="s">S</a>
+                <a id="ixiv">ixiv</a>
             </div>
         </div>
+    </section>
+    <section id="phase4" class="section4">
+        <div class="phase4">
+            <div class="bg_mf"></div>
+            <div class="bike">
+                <div class="swiper-container" id="sc2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide "><img src="/images/photo_bike.jpg "></div>
+                        <div class="swiper-slide"><img src="/images/photo_bike2.jpg "></div>
+                        <div class="swiper-slide"><img src="/images/photo_bike3.jpg"></div>
+
+                    </div>
+                    <div class="swiper-pagination" id="sc_b"></div>
+                    <!-- Add Arrows -->
+
+                </div>
+                <div class="ph4_text">
+                    <a id="ph4_textleft">MY</a>
+                    <a id="ph4_textright">BIKE</a>
+                </div>
+            </div>
+            <div class="favorite">
+
+                <div class="box">
+                    <div class="card card1"><img src="/images/favorite_animate.jpg">
+                        <a id="c1">Animate</a></div>
+                    <div class="card card2"><img src="/images/favorite_game.jpg">
+                        <a id="c2">Game</a></div>
+                    <div class="card card3"><img src="/images/favorite_movie.jpg">
+                        <a id="c3">Movie</a></div>
+                    <div class="card card4"><img src="/images/favorite_streamer.gif">
+                        <a id="c4">Streamer</a></div>
+                </div>
+                <div class="ph4_text">
+                    <div id="ph4_textT"><a>Favorite</a></div>
+                    <div id="ph4_textB"><a>Favorite</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer" class="section5">
+    <div class="footer">
+        <div class="soical">
+            <div class="link"><a href=""><img src="/images/icon_fb.png"></a></div>
+            <div class="link"><a href=""><img src="/images/icon_ig.png"></a></div>
+            <div class="link"><a href=""><img src="/images/icon_youtube.png"></a></div>
+            <div class="link"><a href=""><img src="/images/icon_pixiv.png"></a></div>
+            <div class="link"><a href=""><img src="/images/icon_twitch.png"></a></div>
+        </div>
+    </div>
     </section>
     </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
