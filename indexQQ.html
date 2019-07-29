@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            padding: 10px;
+        }
+
+        .nav_item {
+            text-decoration: none;
+        }
+
+        @media (min-width: 1800px) {
+            .container {
+                max-width: 1600px;
+            }
+        }
+
+        .phase1 {
+            position: relative;
+
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 40px;
+        }
+
+        .navbar {
+            max-height: 50px;
+            position: relative;
+        }
+
+        .nav_text {
+            color: black;
+            font-size: bold;
+            padding: 10px;
+        }
+
+        .banner {
+            padding: 200px;
+            background-color: rgb(161, 159, 159);
+            text-align: center;
+            font-size: 40pt;
+            color: azure;
+        }
+
+
+
+        .about {
+            padding: 50px;
+        }
+
+        .about-img {
+            background-color: gray;
+            padding: 100px;
+            border-radius: 100px;
+            margin: 0 10% 0 10%;
+        }
+
+        .card-body {
+            background-color: gray;
+            /* padding: 100px;
+            max-width: 60%; */
+        }
+
+        .photo {
+            background-color: gray;
+            padding: 130px;
+            margin: 5px;
+        }
+
+        .ph1-bg {
+            background: #898989;
+            padding: 200px;
+            position: absolute;
+            bottom: 10px;
+            opacity: 0.3;
+        }
+
+        .phase2 {
+            position: relative;
+        }
+
+        .ph-yt {
+            background-color: #fff;
+            overflow: hidden;
+            padding: 80px;
+            /* padding: 800px; */
+        }
+
+        .ph2-bg {
+            background-color: #C9CACA;
+            width: 200%;
+            height: 50vh;
+            transform: rotate(10deg);
+            position: absolute;
+            top: 300px;
+            left: -500px;
+            opacity: 0.5;
+        }
+
+        .yt-img-l {
+            background-color: #fff;
+            padding: 200px;
+            z-index: 1;
+            margin-right: 10px;
+        }
+
+        .img-s {
+            /* padding: 100 px; */
+            /* max-width: 200%; */
+            border: 1px black solid;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="phase1">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-light " style="background-color: #898989;">
+            <img class="logo  " src="/images/nav_logo.png" height="150px" width="118px" ;>
+            <div class="container-fluid navbar-brand d-flex justify-content-end">
+
+                <!-- <button class="navbar-toggler " type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+                <div class="nav_right " id="navbarSupportedContent">
+                    <ul class="navbar-nav text-reset ">
+                        <li class="nav-item">
+                            <a href="#phase1" class="nav_text text-decoration-none">About me </a></li>
+                        <li class="nav-item">
+                            <a href="#phase3" class="nav_text text-decoration-none">Proflio </a></li>
+                        <li class="nav-item">
+                            <a href="#phase4" class="nav_text text-decoration-none">My Favorite </a></li>
+                        <li class="nav-item">
+                            <a href="#footer" class="nav_text text-decoration-none">Soial Media</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="banner">
+            <a>BANNER</a>
+        </div>
+
+        <div class="card about d-flex flex-row border-0">
+            <img src="" class="card-img-top about-img col-1">
+            <div class="card-body col-7">
+                <p class="card-text col"></p>
+            </div>
+        </div>
+        <div class="about-photo card col-12 d-flex flex-row border-0">
+            <div class="row col-12 d-flex justify-content-end">
+                <img src="" class="photo col-3">
+                <img src="" class="photo col-3">
+                <img src="" class="photo col-3">
+            </div>
+        </div>
+        <div class="col-12 ph1-bg"></div>
+
+    </section>
+    <section class="phase2">
+        <div class="container ph-yt col-12 ">
+            <div class="row d-flex flex-row justify-content-center ">
+                <div class="card yt-img-l col-5 ">
+                    <img src="">
+                </div>
+                <div class="card yt-img-r col-6">
+                    <div class="row col-6">
+                        <div class="col-4 img-s"><img src=""></div>
+                        <div class="col-4 img-s"><img src=""></div>
+                    </div>
+                    <div class="row col-6">
+                        <div class="col-4 img-s"><img src=""></div>
+                        <div class="col-4 img-s"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="ph2-bg "></div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
