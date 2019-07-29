@@ -98,7 +98,7 @@
         .ph-yt {
             background-color: #fff;
             overflow: hidden;
-            padding: 80px;
+            padding: 40px;
             /* padding: 800px; */
         }
 
@@ -117,7 +117,7 @@
             background-color: #fff;
             padding: 200px;
             z-index: 1;
-            margin-right: 10px;
+            margin-right: 40px;
         }
 
         .img-s {
@@ -125,6 +125,21 @@
             /* max-width: 200%; */
             border: 1px black solid;
 
+        }
+        .yt-text h1{
+            z-index: 1;
+            position: absolute;
+            left: 200px;
+            bottom: -150px;
+        }
+        .yt-icon{
+            background-color: red;
+            padding: 50px;
+            z-index: 2;
+            border-radius: 30px;
+            position: absolute;
+            left: 200px;
+            bottom: -80px;
         }
     </style>
 </head>
@@ -181,19 +196,19 @@
                 <div class="card yt-img-l col-5 ">
                     <img src="">
                 </div>
-                <div class="card yt-img-r col-6">
-                    <div class="row col-6">
-                        <div class="col-4 img-s"><img src=""></div>
-                        <div class="col-4 img-s"><img src=""></div>
-                    </div>
-                    <div class="row col-6">
-                        <div class="col-4 img-s"><img src=""></div>
-                        <div class="col-4 img-s"></div>
+                <div class="card yt-img-r col-6 ">
+                    <div class="row" style="height:100%;">
+                        <div class="col-6  img-s"><img src=""></div>
+                        <div class="col-6  img-s"><img src=""></div>
+                        <div class="col-6  img-s"><img src=""></div>
+                        <div class="col-6  img-s"></div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="yt-text">
+            <img src=""class="yt-icon col-1">
+            <h1>My Youtube Channel</h1>
         </div>
         <div class="ph2-bg "></div>
     </section>
